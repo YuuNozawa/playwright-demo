@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ありがちな実装</title>
+    <script src="main.js"></script>
+    <link href="main.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        <div>
+            <label for="countryDropdown">国を選択してください:</label>
+            <select id="countryDropdown" onchange="toggleEducationFields()">
+                <option value="">--選択--</option>
+                <option value="us">アメリカ合衆国</option>
+                <option value="japan">日本</option>
+                <option value="germany">ドイツ</option>
+            </select>
+        </div>
+
+        <!-- アメリカ合衆国の教育情報フィールド -->
+        <div id="usFields" class="education-fields">
+            <h3>アメリカ合衆国の教育情報</h3>
+            <label for="usSchoolName">学校名:</label>
+            <input type="text" id="usSchoolName"><br>
+            <label for="usGraduationYear">卒業年:</label>
+            <input type="text" id="usGraduationYear"><br>
+            <label for="usGpa">GPA:</label>
+            <input type="text" id="usGpa">
+        </div>
+
+        <!-- 日本の教育情報フィールド -->
+        <div id="japanFields" class="education-fields">
+            <h3>日本の教育情報</h3>
+            <label for="japanSchoolName">学校名:</label>
+            <input type="text" id="japanSchoolName"><br>
+            <label for="japanGraduationYear">卒業年:</label>
+            <input type="text" id="japanGraduationYear"><br>
+            <label for="japanDegree">学位:</label>
+            <input type="text" id="japanDegree">
+        </div>
+
+        <!-- ドイツの教育情報フィールド -->
+        <div id="germanyFields" class="education-fields">
+            <h3>ドイツの教育情報</h3>
+            <label for="germanySchoolName">学校名:</label>
+            <input type="text" id="germanySchoolName"><br>
+            <label for="germanyGraduationYear">卒業年:</label>
+            <input type="text" id="germanyGraduationYear"><br>
+            <label for="germanyAbiturScore">アビトゥアスコア:</label>
+            <input type="text" id="germanyAbiturScore">
+        </div>
+        <div>
+            <input id="editMe" type="text" onchange="textOnChangeHandler()" value="edit me"/>
+        </div>
+    </form>
+</body>
+</html>
